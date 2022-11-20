@@ -19,8 +19,27 @@ import java.util.Scanner;
        product.price = sc.nextDouble();
        System.out.print("Quantity in stock: ");
        product.quantity = sc.nextInt();
+      
+       System.out.println("");
+       System.out.println("Product data: " + product.toString());
        
-       System.out.println(product.name + ", " + product.price + ", " +product.quantity);
+       System.out.println("");
+       System.out.print("Enter the number of products to be added in stock: ");
+       int added = sc.nextInt();
+       product.addProducts(added);
+       
+       System.out.println("");
+       System.out.println("Updated data: " + product.toString());
+       
+       System.out.println("");
+       System.out.print("Enter the number of products to be removed from stock: ");
+       int removed = sc.nextInt();
+       product.removeProducts(removed);
+       
+       System.out.println("");
+       System.out.println("Updated data: " + product.toString());
+       
+       sc.close();
         
    }
 }
